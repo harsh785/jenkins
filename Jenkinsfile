@@ -7,7 +7,8 @@ pipeline {
                 script{
                 sh 'rm -rf /var/www/html/*'
  
-                sh 'scp -r /var/lib/jenkins/workspace/test_main/* /var/www/html/'    
+                sh 'scp -r /var/lib/jenkins/workspace/test_main/* /var/www/html/'
+                sh 'scp -r /var/lib/jenkins/workspace/test_main jenkins@54.183.152.123:/var/www/html/
                 
                 }
             }
