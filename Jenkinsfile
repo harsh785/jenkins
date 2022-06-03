@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Success'
+                script{
+                sh 'rm -rf /var/www/html/*'
+ 
+                sh 'scp -r /var/lib/jenkins/workspace/test_main/* /var/www/html/'    
+                
+                }
             }
         }
         stage('Test') {
