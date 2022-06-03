@@ -15,12 +15,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Success'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Successfull'
             }
         }
     }
